@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 16px 0;
+    background-color: rgb(87, 35, 128);
+    color: azure;
+
+}
+
+header nav li {
+    display: inline;
+    margin-left: 16px;
+}
+
+header nav li a {
+    color: azure;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto; 
+    display: block;
+}
+
+.container-flex{
+    display: flex;
+    margin: 16px auto;
+}
+
+header .container,
+section .container {
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    height: 300px
+}
+
+.imagem-iphone {
+    display: none;
+}
+
+section .container {
+    align-items: flex-start;
+}
+
+section {
+    padding: 8px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+    color: rgb(87, 35, 128);
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+section img {
+    margin-right: 32px;
+}
+
+.lista-produtos{
+    flex-wrap: wrap;
+}
+
+.lista-produtos li {
+    list-style: none; 
+    max-width: 23%; 
+    margin-bottom: 24px;  
+}
+
+.lista-produtos li h3 {
+    margin: 16px 0;
+}
+
+.lista-produtos li img {
+    max-width: 100%;
+}
+
+.item-central{
+    margin: 0 2%;
+}
+
+.item-direita{
+    margin-right: 2%;
+}
+
+.lista-produtos li button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color:  rgb(87, 35, 128);
+    color: azure;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+
+}
+
+.lista-produtos li strong {
+    margin: 16px 0;
+    display: block;
+}
+
+section#sobre-loja h2 {
+    border-bottom: 2px solid rgb(87, 35, 128);
+    padding-bottom: 16px;
+}
+
+section#Produtos h2 {
+    border-bottom: 2px solid rgb(87, 35, 128);
+    padding-bottom: 16px;
+}
+
+@media screen and (max-width:767px){
+
+    img {
+        height: 220px
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .container-flex{
+        display: block;       
+
+    }
+
+    .lista-produtos li {
+        list-style: none; 
+        max-width: 100%; 
+        margin-bottom: 24px;  
+    }
+
+    h1 span.responsive-break::after {
+        content: "\A";
+        white-space: pre;
+    }
+
+    header nav li {
+        display: block;
+        margin-left: 8px;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    header nav {
+        text-align: right;
+    }
+
+    header nav ul {
+        padding: 0;
+    }
+
+    header nav li {        
+        display: block;
+        margin: 0;
+    }
+
+    header h1 {
+        border-bottom: 2px solid rgb(254, 253, 255);
+        padding-bottom: 0px;
+    }
+
+    .container-flex {
+        flex-direction: column;
+    }
+
+    .container-flex h1 {
+        margin-bottom: 16px;
+    }
+
+    .container-flex .imagem-iphone {
+        display: inline;
+        text-align: right;
+    }       
+}
+
+/* Estilos específicos para iPad */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    header nav li {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .container {
+        padding: 0 16px;
+    }
+    .container-flex{
+        display: flex;
+        margin: 16px auto;
+    }
+
+    section#sobre-loja .container-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    section#sobre-loja .image-abelha {
+        margin-bottom: 16px;
+    }
+    
+    section#sobre-loja .image-abelha img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    img {
+        height: 250px;
+    }
+
+    section img {
+        margin-right: 16px;
+    }
+
+    .lista-produtos li {
+        max-width: 48%;
+        margin-bottom: 16px;
+        margin-right: 16px;
+    }
+
+    .lista-produtos li:nth-child(2n) {
+        margin-right: 0; /* Remove a margem direita do último item na linha */
+    }
+}
